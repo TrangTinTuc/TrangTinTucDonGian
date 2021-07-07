@@ -12,11 +12,6 @@
             margin-bottom: 0px;
         }
 
-        .auto-style2 {
-            width: 478px;
-            margin-left: 232px;
-        }
-
         .auto-style3 {
             height: 391px;
             width: 340px;
@@ -32,7 +27,7 @@
 
         .auto-style4 {
             width: 80%;
-            height: 391px;
+            height: 400px;
         }
 
         .auto-style8 {
@@ -62,8 +57,7 @@
                                     <table style="width: 100%">
                                         <tr>
                                             <td>
-                                                <marquee class="auto-style2" direction="lef"> Nhóm 2 Nguyễn Văn Kiên -&nbsp; Đào Mạnh Cường&nbsp; -&nbsp; Nghiêm Thế Chiến</marquee>
-                                            </td>
+                                                &nbsp;</td>
                                             <td style="width: 100px">
                                                 <asp:HyperLink ID="HyperLink3" runat="server" Font-Bold="True" ForeColor="Yellow" NavigateUrl="~/DangNhap.aspx">Đăng nhập</asp:HyperLink>
                                             </td>
@@ -86,8 +80,7 @@
                                 <td style="background-color: #003399; text-align: left;" class="auto-style9">
                                     <asp:DataList ID="DataList1" runat="server" Width="248px" DataSourceID="SqlDataSource1">
                                         <ItemTemplate>
-                                            title:
-                                            <asp:Label ID="titleLabel" runat="server" Text='<%# Eval("title") %>' />
+                                            &nbsp;<asp:Label ID="titleLabel" runat="server" Text='<%# Eval("title") %>' />
                                             <br />
 <br />
                                         </ItemTemplate>
@@ -138,20 +131,14 @@
                             </tr>
                             <tr>
                                 <td style="height: 177px; text-align: left; width: 100%;">
-                                    <asp:DataList ID="DataList2" runat="server" DataKeyField="New_ID">
+                                    <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource2">
                                         <ItemTemplate>
-                                            <div style="text-align: center">
-                                                <table style="width: 100%">
-                                                    <tr>
-                                                        <td style="width: 100%; text-align: justify">
-                                                           
-                                                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "ChiTiet.aspx?Group_ID="+Eval("Group_ID")+"&New_ID="+Eval("New_ID") %>' Text='<%# Eval("Title_News") %>'></asp:HyperLink>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
+                                            &nbsp;<asp:Label ID="titleLabel" runat="server" Text='<%# Eval("title") %>' />
+                                            <br />
+                                            <br />
                                         </ItemTemplate>
                                     </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:TrangTinTucConnectionString %>" SelectCommand="SELECT [title] FROM [tblNews]"></asp:SqlDataSource>
                                     </td>
                             </tr>
                         </table>
@@ -164,8 +151,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="3" style="background-color: #ccffff"><span style="font-size: 14pt; color: #0033ff"><strong>Project C#</strong></span><br />
-                    <strong><span style="color: #0000cc">Nguyen Van Kien - Dao Manh Cuong - Nghiem The Chien</span></strong></td>
+                <td colspan="3" style="background-color: #ccffff">&nbsp;</td>
             </tr>
         </table>
     </form>

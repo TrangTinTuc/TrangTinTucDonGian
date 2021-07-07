@@ -13,5 +13,18 @@ namespace ProjectTrangTinTuc
         {
 
         }
+
+        protected void Login2_Authenticate(object sender, AuthenticateEventArgs e)
+        {
+
+        }
+
+        protected void LoginButton_Click(object sender, EventArgs e)
+        {
+            if (true)
+            {
+
+            }
+        }
     }
 }

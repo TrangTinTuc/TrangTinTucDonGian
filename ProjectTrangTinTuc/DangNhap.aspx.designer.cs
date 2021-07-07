@@ -87,6 +87,15 @@ namespace ProjectTrangTinTuc
         protected global::System.Web.UI.WebControls.Image Image9;
 
         /// <summary>
+        /// Login2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Login Login2;
+
+        /// <summary>
         /// Image4 control.
         /// </summary>
         /// <remarks>
@@ -112,6 +121,15 @@ namespace ProjectTrangTinTuc
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList DataList2;
+
+        /// <summary>
+        /// SqlDataSource2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
 
         /// <summary>
         /// Image6 control.

@@ -13,11 +13,6 @@
             margin-bottom: 0px;
         }
 
-        .auto-style2 {
-            width: 478px;
-            margin-left: 232px;
-        }
-
         .auto-style3 {
             height: 391px;
             width: 340px;
@@ -45,6 +40,9 @@
             width: 103%;
             height: 391px;
         }
+        .auto-style11 {
+            margin-top: 0px;
+        }
         </style>
 </head>
 <body>
@@ -64,8 +62,7 @@
                                     <table style="width: 100%">
                                         <tr>
                                             <td>
-                                                <marquee class="auto-style2" direction="lef"> Nhóm 2 Nguyễn Văn Kiên -&nbsp; Đào Mạnh Cường&nbsp; -&nbsp; Nghiêm Thế Chiến</marquee>
-                                            </td>
+                                                &nbsp;</td>
                                             <td style="width: 100px">
                                                 <asp:HyperLink ID="HyperLink3" runat="server" Font-Bold="True" ForeColor="Yellow" NavigateUrl="~/DangNhap.aspx">Đăng nhập</asp:HyperLink>
                                             </td>
@@ -88,7 +85,6 @@
                                 <td style="background-color: #003399; text-align: left;" class="auto-style9">
                                     <asp:DataList ID="DataList1" runat="server" Width="248px" DataSourceID="SqlDataSource1">
                                         <ItemTemplate>
-                                            title:
                                             <asp:Label ID="titleLabel" runat="server" Text='<%# Eval("title") %>' />
                                             <br />
 <br />
@@ -99,8 +95,7 @@
                             </tr>
                             <tr>
                                 <td style="width: 103px; background-color: #003399; text-align: left">&nbsp;<asp:Image ID="Image7" runat="server" ImageUrl="~/App_Themes/here.gif" Width="16px" Height="17px" />
-                                    &nbsp;
-                                </td>
+                                    &nbsp;</td>
                             </tr>
                         </table>
                     </div>
@@ -126,7 +121,10 @@
                     <div style="text-align: left">
                     </div>
                 </td>
-                <td class="auto-style4"></td>
+                <td class="auto-style4">
+                    <asp:Login ID="Login2" runat="server" CssClass="auto-style11" OnAuthenticate="Login2_Authenticate" Width="452px">
+                    </asp:Login>
+                </td>
                 <td class="auto-style8" style="text-align: right;">
                     <div style="text-align: center">
                     </div>
@@ -140,20 +138,20 @@
                             </tr>
                             <tr>
                                 <td style="height: 177px; text-align: left; width: 100%;">
-                                    <asp:DataList ID="DataList2" runat="server" DataKeyField="New_ID">
+                                    <asp:DataList ID="DataList2" runat="server" CellPadding="4" DataSourceID="SqlDataSource2" ForeColor="#333333" Width="221px">
+                                        <AlternatingItemStyle BackColor="White" />
+                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <ItemStyle BackColor="#EFF3FB" />
                                         <ItemTemplate>
-                                            <div style="text-align: center">
-                                                <table style="width: 100%">
-                                                    <tr>
-                                                        <td style="width: 100%; text-align: justify">
-                                                           
-                                                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "ChiTiet.aspx?Group_ID="+Eval("Group_ID")+"&New_ID="+Eval("New_ID") %>' Text='<%# Eval("Title_News") %>'></asp:HyperLink>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
+                                            title:
+                                            <asp:Label ID="titleLabel" runat="server" Text='<%# Eval("title") %>' />
+                                            <br />
+                                            <br />
                                         </ItemTemplate>
+                                        <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                                     </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:TrangTinTucConnectionString %>" SelectCommand="SELECT [title] FROM [tblNews]"></asp:SqlDataSource>
                                     </td>
                             </tr>
                         </table>
@@ -166,8 +164,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="3" style="background-color: #ccffff"><span style="font-size: 14pt; color: #0033ff"><strong>Project C#</strong></span><br />
-                    <strong><span style="color: #0000cc">Nguyen Van Kien - Dao Manh Cuong - Nghiem The Chien</span></strong></td>
+                <td colspan="3" style="background-color: #ccffff">&nbsp;</td>
             </tr>
         </table>
     </form>
