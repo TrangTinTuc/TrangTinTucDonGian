@@ -7,8 +7,8 @@
     <title></title>
     <style type="text/css">
         .auto-style5 {
-            width: 1351px;
-            height: 1022px;
+            width: 1496px;
+            height: 1024px;
             margin-bottom: 0px;
         }
 
@@ -31,13 +31,17 @@
         }
 
         .auto-style4 {
-            width: 82%;
+            width: 80%;
             height: 391px;
         }
 
         .auto-style8 {
-            width: 99%;
+            width: 103%;
             height: 391px;
+        }
+        .auto-style9 {
+            width: 103px;
+            height: 187px;
         }
     </style>
 </head>
@@ -79,24 +83,20 @@
                     <div style="text-align: left">
                         <table class="auto-style6">
                             <tr>
-                                <td style="width: 103px; height: 187px; background-color: #003399; text-align: left;">
-                                    <asp:DataList ID="DataList1" runat="server" DataKeyField="Group_ID" Width="248px">
+                                <td style="background-color: #003399; text-align: left;" class="auto-style9">
+                                    <asp:DataList ID="DataList1" runat="server" Width="248px" DataSourceID="SqlDataSource1">
                                         <ItemTemplate>
-                                            <table style="width: 100%;">
-                                                <tr>
-                                                    <td style="width: 100%">
-                                                        <asp:Image ID="Image1" runat="server" />
-                                                        &nbsp;
-                                                        <asp:HyperLink ID="HyperLink1" runat="server" Font-Bold="True" ForeColor="#FFFFFF" NavigateUrl='<%# "Nhomtintuc.aspx?Group_ID="+Eval("Group_ID") %>' Text='<%# Eval("Title") %>' Width="143px"></asp:HyperLink>
-                                                    </td>
-                                                </tr>
-                                            </table>
+                                            title:
+                                            <asp:Label ID="titleLabel" runat="server" Text='<%# Eval("title") %>' />
+                                            <br />
+<br />
                                         </ItemTemplate>
                                     </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=localhost;Initial Catalog=TrangTinTuc;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [title] FROM [tblCategory]"></asp:SqlDataSource>
                                 </td>
                             </tr>
                             <tr>
-                                <td style="width: 103px; background-color: #003399; text-align: left">&nbsp;<asp:Image ID="Image7" runat="server" ImageUrl="~/App_Themes/here.gif" Width="16px" />
+                                <td style="width: 103px; background-color: #003399; text-align: left">&nbsp;<asp:Image ID="Image7" runat="server" ImageUrl="~/App_Themes/here.gif" Width="16px" Height="17px" />
                                     &nbsp;
                                 </td>
                             </tr>
@@ -144,7 +144,7 @@
                                                 <table style="width: 100%">
                                                     <tr>
                                                         <td style="width: 100%; text-align: justify">
-                                                            <asp:Image ID="Image2" runat="server" ImageUrl="~/App_Themes/Chi_tiet.gif" />
+                                                           
                                                             <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "ChiTiet.aspx?Group_ID="+Eval("Group_ID")+"&New_ID="+Eval("New_ID") %>' Text='<%# Eval("Title_News") %>'></asp:HyperLink>
                                                         </td>
                                                     </tr>
@@ -152,7 +152,7 @@
                                             </div>
                                         </ItemTemplate>
                                     </asp:DataList>
-                                    &nbsp;&nbsp; </td>
+                                    </td>
                             </tr>
                         </table>
                         <hr />
@@ -164,7 +164,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="3" height="80" style="background-color: #ccffff"><span style="font-size: 14pt; color: #0033ff"><strong>Project C#</strong></span><br />
+                <td colspan="3" style="background-color: #ccffff"><span style="font-size: 14pt; color: #0033ff"><strong>Project C#</strong></span><br />
                     <strong><span style="color: #0000cc">Nguyen Van Kien - Dao Manh Cuong - Nghiem The Chien</span></strong></td>
             </tr>
         </table>
