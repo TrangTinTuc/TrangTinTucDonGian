@@ -5,10 +5,10 @@ C:\Users\PhongVuVP\source\repos\ProjectTrangTinTuc\ProjectTrangTinTuc\obj\Debug\
 C:\Users\PhongVuVP\source\repos\ProjectTrangTinTuc\ProjectTrangTinTuc\obj\Debug\ProjectTrangTinTuc.csproj.CoreCompileInputs.cache
 C:\Users\PhongVuVP\source\repos\ProjectTrangTinTuc\ProjectTrangTinTuc\obj\Debug\ProjectTrangTinTuc.dll
 C:\Users\PhongVuVP\source\repos\ProjectTrangTinTuc\ProjectTrangTinTuc\obj\Debug\ProjectTrangTinTuc.pdb
-C:\Users\PhongVuVP\Source\Repos\TrangTinTucDonGian\ProjectTrangTinTuc\bin\ProjectTrangTinTuc.dll.config
-C:\Users\PhongVuVP\Source\Repos\TrangTinTucDonGian\ProjectTrangTinTuc\bin\ProjectTrangTinTuc.dll
-C:\Users\PhongVuVP\Source\Repos\TrangTinTucDonGian\ProjectTrangTinTuc\bin\ProjectTrangTinTuc.pdb
-C:\Users\PhongVuVP\Source\Repos\TrangTinTucDonGian\ProjectTrangTinTuc\obj\Debug\ProjectTrangTinTuc.csprojAssemblyReference.cache
-C:\Users\PhongVuVP\Source\Repos\TrangTinTucDonGian\ProjectTrangTinTuc\obj\Debug\ProjectTrangTinTuc.csproj.CoreCompileInputs.cache
-C:\Users\PhongVuVP\Source\Repos\TrangTinTucDonGian\ProjectTrangTinTuc\obj\Debug\ProjectTrangTinTuc.dll
-C:\Users\PhongVuVP\Source\Repos\TrangTinTucDonGian\ProjectTrangTinTuc\obj\Debug\ProjectTrangTinTuc.pdb
+C:\Users\PhongVuVP\source\repos\TrangTinTucDonGian\ProjectTrangTinTuc\bin\ProjectTrangTinTuc.dll.config
+C:\Users\PhongVuVP\source\repos\TrangTinTucDonGian\ProjectTrangTinTuc\bin\ProjectTrangTinTuc.dll
+C:\Users\PhongVuVP\source\repos\TrangTinTucDonGian\ProjectTrangTinTuc\bin\ProjectTrangTinTuc.pdb
+C:\Users\PhongVuVP\source\repos\TrangTinTucDonGian\ProjectTrangTinTuc\obj\Debug\ProjectTrangTinTuc.csprojAssemblyReference.cache
+C:\Users\PhongVuVP\source\repos\TrangTinTucDonGian\ProjectTrangTinTuc\obj\Debug\ProjectTrangTinTuc.csproj.CoreCompileInputs.cache
+C:\Users\PhongVuVP\source\repos\TrangTinTucDonGian\ProjectTrangTinTuc\obj\Debug\ProjectTrangTinTuc.dll
+C:\Users\PhongVuVP\source\repos\TrangTinTucDonGian\ProjectTrangTinTuc\obj\Debug\ProjectTrangTinTuc.pdb

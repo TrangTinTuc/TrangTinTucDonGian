@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DangNhap.aspx.cs" Inherits="ProjectTrangTinTuc.DangNhap" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DangKi.aspx.cs" Inherits="ProjectTrangTinTuc.DangKi" %>
 
 <!DOCTYPE html>
 
@@ -13,47 +13,37 @@
             margin-bottom: 0px;
         }
 
+        .auto-style18 {
+            height: 23px;
+        }
+        .auto-style10 {
+            width: 100%;
+            height: 64px;
+        }
+        .auto-style11 {
+            height: 64px;
+            width: 889px;
+        }
+        .auto-style12 {
+            width: 100px;
+            height: 64px;
+        }
+        
         .auto-style3 {
             height: 391px;
             width: 340px;
         }
 
         .auto-style6 {
-            width: 97%;
+            width: 95%;
         }
 
         .auto-style9 {
             width: 176px;
             height: 187px;
         }
-    
-        .auto-style7 {
-            width: 271px;
-        }
-
-        .auto-style4 {
-            width: 80%;
-            height: 391px;
-
-        }
-
-        .auto-style8 {
-            width: 103%;
-            height: 391px;
-        }
-        .auto-style12 {
-            width: 100%;
-            height: 55px;
-        }
-        .auto-style13 {
-            margin-left: 334px;
-            margin-top: 0px;
-        }
-        .auto-style14 {
-            margin-left: 10px;
-        }
-        .auto-style15 {
-            margin-left: 83px;
+        .auto-style19 {
+            width: 176px;
         }
         .auto-style16 {
             margin-left: 3px;
@@ -62,19 +52,19 @@
         .auto-style17 {
             margin-left: 95px;
         }
-        .auto-style18 {
-            height: 64px;
-            width: 919px;
+        
+        .auto-style7 {
+            width: 271px;
         }
-        .auto-style19 {
-            width: 100px;
-            height: 64px;
+
+        .auto-style4 {
+            width: 80%;
+            height: 400px;
         }
-        .auto-style20 {
-            width: 176px;
-        }
-        .auto-style21 {
-            margin-left: 4px;
+
+        .auto-style8 {
+            width: 103%;
+            height: 391px;
         }
         </style>
 </head>
@@ -87,20 +77,20 @@
                 <td colspan="3" style="background-image: url(''); height: 120px;"></td>
             </tr>
             <tr>
-                <td colspan="3" style="text-align: right; height: 24px;">
+                <td colspan="3" style="text-align: right; " class="auto-style18">
                     <div style="background-color: #3399cc; text-align: right">
                         <div style="text-align: right">
                             <span style="color: #ffffff"><strong>
                                 <div style="text-align: center">
-                                    <table class="auto-style12">
+                                    <table class="auto-style10">
                                         <tr>
-                                            <td class="auto-style18">
+                                            <td class="auto-style11">
                                                 </td>
-                                            <td class="auto-style19">
+                                            <td class="auto-style12">
                                                 <asp:HyperLink ID="HyperLink3" runat="server" Font-Bold="True" ForeColor="Yellow" NavigateUrl="~/DangNhap.aspx">Đăng nhập</asp:HyperLink>
                                             </td>
-                                            <td class="auto-style19">
-                                                <asp:HyperLink ID="HyperLink4" runat="server" Font-Bold="True" ForeColor="Yellow" NavigateUrl="~/TrangChu.aspx">Trang chủ </asp:HyperLink>
+                                            <td class="auto-style12">
+                                                <asp:HyperLink ID="HyperLink4" runat="server" Font-Bold="True" ForeColor="Yellow" NavigateUrl="~/TrangChu.aspx">Trang chủ</asp:HyperLink>
                                             </td>
                                         </tr>
                                     </table>
@@ -115,10 +105,10 @@
                     <div style="text-align: left">
                         <table class="auto-style6">
                             <tr>
-                                <td style="text-align: left;" class="auto-style9">
+                                <td text-align: left;" class="auto-style9">
                                     <asp:DataList ID="DataList1" runat="server" Width="235px" DataSourceID="SqlDataSource1">
                                         <ItemTemplate>
-                                            <asp:Label ID="titleLabel" runat="server" Text='<%# Eval("title") %>' />
+                                            &nbsp;<asp:Label ID="titleLabel" runat="server" Text='<%# Eval("title") %>' />
                                             <br />
 <br />
                                         </ItemTemplate>
@@ -127,8 +117,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="text-align: left" class="auto-style20">&nbsp;&nbsp;Tìm kiếm<asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style16" Width="240px"></asp:TextBox>
-                                    <asp:Button ID="Button1" runat="server" CssClass="auto-style17" Height="25px" Text="Button" Width="54px" />
+                                <td style="text-align: left" class="auto-style19">&nbsp;&nbsp;
+                                    Tìm kiếm<asp:TextBox ID="txtSearch" runat="server" CssClass="auto-style16" Width="240px"></asp:TextBox>
+                                    <asp:Button ID="btnSearch" runat="server" CssClass="auto-style17" Height="25px" Text="Button" Width="54px" />
                                 </td>
                             </tr>
                         </table>
@@ -138,7 +129,7 @@
                         <table>
                             <tr>
                                 <td style="background-image: url(''); width: 135px; height: 200px">
-                                    <asp:Image ID="Image8" runat="server" Height="82px" Width="113px" />
+                                    <asp:Image ID="Image8" runat="server" Height="146px" Width="141px" />
                                 </td>
                             </tr>
                         </table>
@@ -147,7 +138,7 @@
                         <table style="width: 141px; height: 204px">
                             <tr>
                                 <td style="background-image: url(''); width: 100px">
-                                    <asp:Image ID="Image9" runat="server" Height="105px" Width="114px" />
+                                    <asp:Image ID="Image9" runat="server" Height="162px" Width="131px" />
                                 </td>
                             </tr>
                         </table>
@@ -155,18 +146,8 @@
                     <div style="text-align: left">
                     </div>
                 </td>
-                <td class="auto-style4">&nbsp;&nbsp; &nbsp;<asp:Panel ID="Panel1" runat="server" CssClass="auto-style13" Height="163px" Width="266px">
-                    Username<asp:TextBox ID="txtUsername" runat="server" CssClass="auto-style14"></asp:TextBox>
-                    <br />
-                    Password&nbsp;
-                    <asp:TextBox ID="txtPassword" runat="server" CssClass="auto-style21"></asp:TextBox>
-                    <br />
-                    <br />
-                    <asp:Button ID="btnLogin" runat="server" CssClass="auto-style15" OnClick="btnLogin_Click" Text="Login" Height="35px" Width="83px" />
-                    <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/DangKi.aspx">Đăng Kí</asp:HyperLink>
-                    <br />
-                    </asp:Panel>
-                </td>
+                <td class="auto-style4">
+                    Trang Dang Ki</td>
                 <td class="auto-style8" style="text-align: right;">
                     <div style="text-align: center">
                     </div>
@@ -180,9 +161,9 @@
                             </tr>
                             <tr>
                                 <td style="height: 177px; text-align: left; width: 100%;">
-                                    <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource2" Width="221px">
+                                    <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource2">
                                         <ItemTemplate>
-                                            <asp:Label ID="titleLabel" runat="server" Text='<%# Eval("title") %>' />
+                                            &nbsp;<asp:Label ID="titleLabel3" runat="server" Text='<%# Eval("title") %>' />
                                             <br />
                                             <br />
                                         </ItemTemplate>
