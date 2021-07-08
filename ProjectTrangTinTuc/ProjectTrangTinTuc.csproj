@@ -61,19 +61,39 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdminSite.aspx" />
+    <Content Include="Admin\AdminSite.aspx" />
+    <Content Include="Admin\QuanLyBaiViet.aspx" />
+    <Content Include="Admin\QuanLyUser.aspx" />
     <Content Include="DangKi.aspx" />
     <Content Include="DangNhap.aspx" />
+    <Content Include="Images\BIDV_901_LLL.gif" />
+    <Content Include="Images\CMC_020108_LLL.gif" />
+    <Content Include="Images\LG_SR_1412.gif" />
+    <Content Include="Images\thegioididong_SL_2403.gif" />
     <Content Include="TrangChu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminSite.aspx.cs">
+    <Compile Include="Admin\AdminSite.aspx.cs">
       <DependentUpon>AdminSite.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminSite.aspx.designer.cs">
+    <Compile Include="Admin\AdminSite.aspx.designer.cs">
       <DependentUpon>AdminSite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanLyBaiViet.aspx.cs">
+      <DependentUpon>QuanLyBaiViet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyBaiViet.aspx.designer.cs">
+      <DependentUpon>QuanLyBaiViet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanLyUser.aspx.cs">
+      <DependentUpon>QuanLyUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyUser.aspx.designer.cs">
+      <DependentUpon>QuanLyUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="DangKi.aspx.cs">
       <DependentUpon>DangKi.aspx</DependentUpon>
@@ -99,6 +119,7 @@
       <DependentUpon>TrangChu.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -126,7 +126,7 @@
                         <table>
                             <tr>
                                 <td style="background-image: url(''); width: 135px; height: 200px">
-                                    <asp:Image ID="Image8" runat="server" Height="146px" Width="141px" />
+                                    <asp:Image ID="Image8" runat="server" Height="181px" Width="125px" ImageUrl="~/Images/BIDV_901_LLL.gif" />
                                 </td>
                             </tr>
                         </table>
@@ -135,7 +135,7 @@
                         <table style="width: 141px; height: 204px">
                             <tr>
                                 <td style="background-image: url(''); width: 100px">
-                                    <asp:Image ID="Image9" runat="server" Height="162px" Width="131px" />
+                                    <asp:Image ID="Image9" runat="server" Height="162px" Width="131px" ImageUrl="~/Images/CMC_020108_LLL.gif" />
                                 </td>
                             </tr>
                         </table>
@@ -269,6 +269,19 @@
                         </SelectedItemTemplate>
                     </asp:ListView>
                     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:TrangTinTucConnectionString %>" SelectCommand="SELECT [author_ID], [category_ID], [title], [date] FROM [tblNews]"></asp:SqlDataSource>
+                    <br />
+                    <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="13pt" ForeColor="Blue" Text="Các tin tức sự kiện nổi bật đã diễn ra"></asp:Label>
+                    <hr />
+                    <asp:DataList ID="DataList3" runat="server" datasourceid="SqlDataSource4" Width="98%">
+                        <ItemTemplate>
+                            &nbsp;<asp:Label ID="titleLabel" runat="server" Text='<%# Eval("title") %>' />
+                            <br />
+                            &nbsp;<asp:Label ID="pictureLabel" runat="server" Text='<%# Eval("picture") %>' />
+                            <br />
+                            <br />
+                        </ItemTemplate>
+                    </asp:DataList>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:TrangTinTucConnectionString %>" SelectCommand="SELECT [title], [picture] FROM [tblNews]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style8" style="text-align: right;">
                     <div style="text-align: center">
@@ -295,10 +308,10 @@
                             </tr>
                         </table>
                         <hr />
-                        <asp:Image ID="Image6" runat="server" Height="204px" Width="134px" />
+                        <asp:Image ID="Image6" runat="server" Height="204px" Width="134px" ImageUrl="~/Images/LG_SR_1412.gif" />
                         &nbsp;
                         <br />
-                        <asp:Image ID="Image5" runat="server" Height="190px" Width="134px" />
+                        <asp:Image ID="Image5" runat="server" Height="190px" Width="134px" ImageUrl="~/Images/thegioididong_SL_2403.gif" />
                     </div>
                 </td>
             </tr>

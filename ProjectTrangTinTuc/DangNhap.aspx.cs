@@ -28,7 +28,7 @@ namespace ProjectTrangTinTuc
                 if (dt.Rows.Count > 0)
                 {
                     //login thanh cong
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Login Successfully!');location.href='AdminSite.aspx';", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Login Successfully!');location.href='Admin/AdminSite.aspx';", true);
                   
                 }
                 else

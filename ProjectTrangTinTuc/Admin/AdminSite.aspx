@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DangKi.aspx.cs" Inherits="ProjectTrangTinTuc.DangKi" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminSite.aspx.cs" Inherits="ProjectTrangTinTuc.AdminSite" %>
 
 <!DOCTYPE html>
 
@@ -66,6 +66,10 @@
             width: 103%;
             height: 391px;
         }
+        .auto-style20 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
         </style>
 </head>
 <body>
@@ -120,6 +124,9 @@
                                 <td style="text-align: left" class="auto-style19">&nbsp;&nbsp;
                                     Tìm kiếm<asp:TextBox ID="txtSearch" runat="server" CssClass="auto-style16" Width="240px"></asp:TextBox>
                                     <asp:Button ID="btnSearch" runat="server" CssClass="auto-style17" Height="25px" Text="Tìm" Width="54px" />
+                                    <br />
+                                    <br />
+                                    <br />
                                 </td>
                             </tr>
                         </table>
@@ -129,7 +136,7 @@
                         <table>
                             <tr>
                                 <td style="background-image: url(''); width: 135px; height: 200px">
-                                    <asp:Image ID="Image8" runat="server" Height="171px" Width="128px" ImageUrl="~/Images/BIDV_901_LLL.gif" />
+                                    <asp:Image ID="Image8" runat="server" Height="179px" Width="127px" ImageUrl="~/Images/BIDV_901_LLL.gif" />
                                 </td>
                             </tr>
                         </table>
@@ -147,7 +154,11 @@
                     </div>
                 </td>
                 <td class="auto-style4">
-                    Trang Dang Ki</td>
+                    <asp:Panel ID="Panel1" runat="server" CssClass="auto-style20" Height="185px">
+                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Admin/QuanLyBaiViet.aspx">Quản lí bài viết</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Admin/QuanLyUser.aspx">Quản lí User</asp:HyperLink>
+                    </asp:Panel>
+                </td>
                 <td class="auto-style8" style="text-align: right;">
                     <div style="text-align: center">
                     </div>

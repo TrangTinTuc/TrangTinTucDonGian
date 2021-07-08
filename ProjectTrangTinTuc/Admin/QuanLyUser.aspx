@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DangKi.aspx.cs" Inherits="ProjectTrangTinTuc.DangKi" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="QuanLyUser.aspx.cs" Inherits="ProjectTrangTinTuc.Admin.QuanLyUser" %>
 
 <!DOCTYPE html>
 
@@ -6,6 +6,7 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
+
 
         .auto-style5 {
             width: 1496px;
@@ -62,6 +63,11 @@
             height: 400px;
         }
 
+        .auto-style20 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
         .auto-style8 {
             width: 103%;
             height: 391px;
@@ -70,8 +76,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-        </div>
         <table border="1" class="auto-style5">
             <tr>
                 <td colspan="3" style="background-image: url(''); height: 120px;"></td>
@@ -120,6 +124,9 @@
                                 <td style="text-align: left" class="auto-style19">&nbsp;&nbsp;
                                     Tìm kiếm<asp:TextBox ID="txtSearch" runat="server" CssClass="auto-style16" Width="240px"></asp:TextBox>
                                     <asp:Button ID="btnSearch" runat="server" CssClass="auto-style17" Height="25px" Text="Tìm" Width="54px" />
+                                    <br />
+                                    <br />
+                                    <br />
                                 </td>
                             </tr>
                         </table>
@@ -129,7 +136,7 @@
                         <table>
                             <tr>
                                 <td style="background-image: url(''); width: 135px; height: 200px">
-                                    <asp:Image ID="Image8" runat="server" Height="171px" Width="128px" ImageUrl="~/Images/BIDV_901_LLL.gif" />
+                                    <asp:Image ID="Image8" runat="server" Height="172px" Width="124px" ImageUrl="~/Images/BIDV_901_LLL.gif" />
                                 </td>
                             </tr>
                         </table>
@@ -147,7 +154,34 @@
                     </div>
                 </td>
                 <td class="auto-style4">
-                    Trang Dang Ki</td>
+                    <asp:Panel ID="Panel1" runat="server" CssClass="auto-style20" Height="28px">
+                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Admin/QuanLyBaiViet.aspx">Quản lí bài viết</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Admin/QuanLyUser.aspx">Quản lí User</asp:HyperLink>
+                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="user_ID" DataSourceID="SqlDataSource3" EnableModelValidation="True" ForeColor="#333333" GridLines="None">
+                            <AlternatingRowStyle BackColor="White" />
+                            <Columns>
+                                <asp:CommandField ShowSelectButton="True" />
+                                <asp:BoundField DataField="user_ID" HeaderText="user_ID" InsertVisible="False" ReadOnly="True" SortExpression="user_ID" />
+                                <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
+                                <asp:BoundField DataField="fullname" HeaderText="fullname" SortExpression="fullname" />
+                                <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" />
+                                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
+                                <asp:BoundField DataField="phone" HeaderText="phone" SortExpression="phone" />
+                                <asp:BoundField DataField="power" HeaderText="power" SortExpression="power" />
+                                <asp:CommandField ShowDeleteButton="True" />
+                                <asp:CommandField ShowEditButton="True" />
+                            </Columns>
+                            <EditRowStyle BackColor="#7C6F57" />
+                            <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#E3EAEB" />
+                            <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                        </asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:TrangTinTucConnectionString %>" SelectCommand="SELECT [user_ID], [username], [fullname], [address], [email], [phone], [power] FROM [tblUser]"></asp:SqlDataSource>
+                        <br />
+                    </asp:Panel>
+                </td>
                 <td class="auto-style8" style="text-align: right;">
                     <div style="text-align: center">
                     </div>
