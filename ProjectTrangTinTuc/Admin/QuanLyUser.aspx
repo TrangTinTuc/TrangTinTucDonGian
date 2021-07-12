@@ -157,10 +157,10 @@
                     <asp:Panel ID="Panel1" runat="server" CssClass="auto-style20" Height="28px">
                         <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Admin/QuanLyBaiViet.aspx">Quản lí bài viết</asp:HyperLink>
                         <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Admin/QuanLyUser.aspx">Quản lí User</asp:HyperLink>
-                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="user_ID" DataSourceID="SqlDataSource3" EnableModelValidation="True" ForeColor="#333333" GridLines="None">
+                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="user_ID" DataSourceID="SqlDataSource3" EnableModelValidation="True" ForeColor="#333333" GridLines="None" AllowPaging="True">
                             <AlternatingRowStyle BackColor="White" />
                             <Columns>
-                                <asp:CommandField ShowSelectButton="True" />
+                                <asp:CommandField ShowSelectButton="True" ButtonType="Button" />
                                 <asp:BoundField DataField="user_ID" HeaderText="user_ID" InsertVisible="False" ReadOnly="True" SortExpression="user_ID" />
                                 <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
                                 <asp:BoundField DataField="fullname" HeaderText="fullname" SortExpression="fullname" />
@@ -168,8 +168,8 @@
                                 <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
                                 <asp:BoundField DataField="phone" HeaderText="phone" SortExpression="phone" />
                                 <asp:BoundField DataField="power" HeaderText="power" SortExpression="power" />
-                                <asp:CommandField ShowDeleteButton="True" />
-                                <asp:CommandField ShowEditButton="True" />
+                                <asp:CommandField ButtonType="Button" ShowEditButton="True" />
+                                <asp:CommandField ButtonType="Button" ShowDeleteButton="True" />
                             </Columns>
                             <EditRowStyle BackColor="#7C6F57" />
                             <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />

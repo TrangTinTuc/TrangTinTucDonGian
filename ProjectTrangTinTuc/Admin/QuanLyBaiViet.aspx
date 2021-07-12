@@ -60,7 +60,7 @@
 
         .auto-style4 {
             width: 80%;
-            height: 400px;
+
         }
 
         .auto-style20 {
@@ -71,6 +71,13 @@
         .auto-style8 {
             width: 103%;
             height: 391px;
+        }
+        .auto-style21 {
+            margin-left: 35px;
+        }
+        .auto-style22 {
+            margin-left: 0px;
+            margin-top: 4px;
         }
         </style>
 </head>
@@ -157,17 +164,51 @@
                     <asp:Panel ID="Panel1" runat="server" CssClass="auto-style20" Height="28px">
                         <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Admin/QuanLyBaiViet.aspx">Quản lí bài viết</asp:HyperLink>
                         <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Admin/QuanLyUser.aspx">Quản lí User</asp:HyperLink>
-                        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="news_ID" DataSourceID="SqlDataSource3" EnableModelValidation="True" ForeColor="#333333" GridLines="None">
+                        <br />
+                        <div>
+                            <asp:Label ID="Label6" runat="server" Text="News ID :"></asp:Label>
+                            &nbsp;<asp:TextBox ID="txtCode" runat="server" ReadOnly="True" style="margin-left: 1px" Width="84px"></asp:TextBox>
+                            <br />
+                            <asp:Label ID="Label2" runat="server" Text="Category"></asp:Label>
+                            &nbsp;<asp:DropDownList ID="ddlCategory" runat="server" DataSourceID="SqlDataSource4" DataTextField="title" DataValueField="title" style="margin-left: 0px">
+                                <asp:ListItem Value="Cai">Cai</asp:ListItem>
+                                <asp:ListItem Value="Chiec">Chiec</asp:ListItem>
+                                <asp:ListItem Value="Bo">Bo</asp:ListItem>
+                                <asp:ListItem Value="kilogam">kilogam</asp:ListItem>
+                            </asp:DropDownList>
+                            <br />
+                            <asp:Label ID="Label7" runat="server" Text="Author ID :"></asp:Label>
+                            &nbsp;<asp:TextBox ID="txtAuthorID" runat="server" ReadOnly="True" style="margin-left: 1px" Width="84px"></asp:TextBox>
+                            <br />
+                            <asp:Label ID="Label3" runat="server" Text="Title: "></asp:Label>
+                            <asp:TextBox ID="txtTitle" runat="server" style="margin-left: 0px" Width="126px"></asp:TextBox>
+                            <br />
+                            <asp:Label ID="Label4" runat="server" Text="Image:"></asp:Label>
+                            &nbsp;<asp:TextBox ID="txtImage" runat="server" style="margin-left: 0px"></asp:TextBox>
+                            <br />
+                            <asp:Label ID="Label5" runat="server" Text="Date: "></asp:Label>
+                            &nbsp;<asp:TextBox ID="txtDate" runat="server" style="margin-left: 0px"></asp:TextBox>
+                        </div>
+                        <asp:Button ID="btnInsert" runat="server" OnClick="btnInsert_Click" Text="Insert" />
+                        <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" style="margin-left: 53px" Text="Update" />
+                        <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" style="margin-left: 71px" Text="Delete" />
+                        <br />
+                        &nbsp;&nbsp; Tìm kiếm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:TextBox ID="txtSearch0" runat="server" CssClass="auto-style22" Width="240px"></asp:TextBox>
+                        <asp:Button ID="btnSearch0" runat="server" CssClass="auto-style21" Height="25px" Text="Tìm" Width="54px" />
+                        <asp:GridView ID="gvNews" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" EnableModelValidation="True" ForeColor="#333333" GridLines="None" Height="93px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                             <AlternatingRowStyle BackColor="White" />
                             <Columns>
-                                <asp:CommandField ShowSelectButton="True" />
-                                <asp:BoundField DataField="news_ID" HeaderText="news_ID" InsertVisible="False" ReadOnly="True" SortExpression="news_ID" />
+                                <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
+                                <asp:BoundField DataField="news_ID" HeaderText="news_ID" SortExpression="news_ID" />
                                 <asp:BoundField DataField="category_ID" HeaderText="category_ID" SortExpression="category_ID" />
                                 <asp:BoundField DataField="author_ID" HeaderText="author_ID" SortExpression="author_ID" />
                                 <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
+                                <asp:BoundField DataField="body" HeaderText="body" SortExpression="body" />
                                 <asp:BoundField DataField="picture" HeaderText="picture" SortExpression="picture" />
                                 <asp:BoundField DataField="date" HeaderText="date" SortExpression="date" />
-                                <asp:CommandField ShowEditButton="True" />
+                                <asp:CommandField ButtonType="Button" ShowEditButton="True" />
+                                <asp:CommandField ButtonType="Button" ShowDeleteButton="True" />
                             </Columns>
                             <EditRowStyle BackColor="#7C6F57" />
                             <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
@@ -176,7 +217,7 @@
                             <RowStyle BackColor="#E3EAEB" />
                             <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
                         </asp:GridView>
-                        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:TrangTinTucConnectionString %>" SelectCommand="SELECT [news_ID], [category_ID], [author_ID], [title], [picture], [date] FROM [tblNews]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:TrangTinTucConnectionString %>" SelectCommand="SELECT [title] FROM [tblCategory]"></asp:SqlDataSource>
                     </asp:Panel>
                 </td>
                 <td class="auto-style8" style="text-align: right;">
@@ -210,9 +251,6 @@
                         <asp:Image ID="Image5" runat="server" Height="190px" Width="134px" ImageUrl="~/Images/thegioididong_SL_2403.gif" />
                     </div>
                 </td>
-            </tr>
-            <tr>
-                <td colspan="3" style="background-color: #ccffff">&nbsp;</td>
             </tr>
         </table>
     </form>
